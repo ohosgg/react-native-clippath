@@ -1,60 +1,14 @@
-# React Native ClipPath
+# clippath单元测试用例
 
-android: api 21+   
-ios : 10.0+   
-web: svg    
-  
- Example --> [Demo](https://github.com/Only-IceSoul/canal/tree/master/react-native/LiquidSwipe/ClipPath)   
-<img src="./src/demo.jpg" width="300">
+该测试用例基于HarmonyOS系统下，采用[原库测试用例](https://gitee.com/harmonyOS_tony/harmony/blob/master/ClipPathViewDemo-CAPI.tsx)
+进行单元测试
 
-## Getting started
+单元测试用例覆盖情况
 
-`$ npm install react-native-clippathview --save`  
-`$ react-native link react-native-clippathview`  
-  
-### Yarn
-
-`yarn add react-native-clippathview`
-
-## IOS
-
-**Add Swift**
-
-(If you are using expo sdk >=42 you don't need to do this)
-
-/ios/name_project
-
-add a .swift file
-
-# Usage
-ClipPathViewH (Android Layer type Hardware)  
-```javascript
-import {ClipPathView , ClipPathViewH } from 'react-native-clippathview'
-
-// TODO: What to do with the module?
-    <ClipPathView style={{backgroundColor:'green'}} 
-
-       
-        d={myPath}
-        viewBox={myViewBox}
-        
-        
-    
-    >
-  
-        <View >
-            <Text style={{color:'white'}}>hello world</Text>
-        </View>
-        
-    </ClipPathView>
-
-```
-
-## Props   
+## Props
 
 | Name | description | type | default |
 | --- | --- | --- | --- |
-| svgKey | Each view must have a different key  | String | "" |
 | d | The shape, defined by a series of commands   | String | "" |
 | viewBox | defines the position and dimension, in user space    | Array[Number] (4) | undefined |
 | align | the aligment     | String | xMidYMid |
@@ -73,8 +27,8 @@ import {ClipPathView , ClipPathViewH } from 'react-native-clippathview'
 
 <br>
 
-The percentageValue property refers to the fact that the Origin will be multiplied by the size of the view.  
-  
+The percentageValue property refers to the fact that the Origin will be multiplied by the size of the view.
+
 | Name | type | default |
 | --- | --- | --- |
 | translateZ | Number (zIndex) | 0 |
@@ -92,6 +46,3 @@ The percentageValue property refers to the fact that the Origin will be multipli
 | scOx | Number | 0 |
 | scOy | Number | 0 |
 | scPercentageValue | Bool | false |
-
-
-

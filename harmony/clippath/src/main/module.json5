@@ -1,0 +1,11 @@
+{
+  "module": {
+    "name": "clippath",
+    "type": "har",
+    "deviceTypes": [
+      "default",
+      "tablet",
+      "2in1"
+    ]
+  }
+}

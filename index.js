@@ -1,24 +1,23 @@
-// main index.js
-// import ClipPath from 'react-native-clippathview/src/ClipPath'
-// import ClipPathH from 'react-native-clippathview/src/ClipPathH'
-// export const ClipPathViewH = ClipPathH
-// export const ClipPathView = ClipPath
 
-import React from 'react';
-import ClipPathNativeComponent from './src/ClipPathNativeComponent';
+import { Platform } from "react-native";
+//import ClipPathViewIos from "./src/ClipPath.ios.js";
+import ClipPathViewNoneAndroid from "./src/ClipPath.android.js";
+//import ClipPathViewWeb from "./src/ClipPath.web.js";
+export const ClipPathView  = ClipPathViewNoneAndroid;
 
-const ClipPath = React.forwardRef((props, ref) => {
-    const { style, ...otherProps } = props;
-    const { backgroundColor, ...otherStyle } = style;
-    let newProps = { ...otherProps, style: otherStyle };
-    if (backgroundColor) {
-        newProps.fill = backgroundColor;
-    }
-    return (
-        <ClipPathNativeComponent ref={ref} {...newProps}></ClipPathNativeComponent>
-    )
-})
-export {
-    ClipPath as ClipPathView
-}
-export default ClipPath
+import ClipPathViewAndroid from "./src/ClipPath.android.js";
+//import ClipPathViewWeb from "./src/ClipPath.web.js";
+export const ClipPathViewH  = ClipPathViewAndroid;
+/*
+export const ClipPathView = Platform.OS === "ios"
+  ? ClipPathViewIos : Platform.OS === "android"
+  ? ClipPathViewAndroid : ClipPathViewWeb;
+
+import ClipPathViewHIos from "./src/ClipPathH.ios.js";
+import ClipPathViewHAndroid from "./src/ClipPathH.android.js";
+import ClipPathViewHWeb from "./src/ClipPathH.web.js";
+
+export const ClipPathViewH = Platform.OS === "ios"
+  ? ClipPathViewHIos : Platform.OS === "android"
+  ? ClipPathViewHAndroid : ClipPathViewHWeb;
+*/

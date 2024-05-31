@@ -1,0 +1,11 @@
+[
+    {
+        "Name": "react-native-clippathview",
+        "License": "MIT License",
+        "License File": "https://github.com/Only-IceSoul/react-native-clippath/blob/main/LICENSE",
+        "Version Number": "1.1.8",
+        "Owner" : "Only-IceSoul"
+        "Upstream URL": "https://github.com/Only-IceSoul/react-native-clippath.git",
+        "Description": "ClipPath Mobile Web "
+    }
+]
